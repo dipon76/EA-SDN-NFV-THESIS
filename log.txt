@@ -1,0 +1,1607 @@
+regression-tests/23-rpl-non-storing/code/sender-node.c:#include "net/ip/uip.h"
+regression-tests/23-rpl-non-storing/code/receiver-node.c:#include "net/ip/uip.h"
+regression-tests/23-rpl-non-storing/code/root-node.c:#include "net/ip/uip.h"
+regression-tests/12-rpl/code/sender-node.c:#include "net/ip/uip.h"
+regression-tests/12-rpl/code/receiver-node.c:#include "net/ip/uip.h"
+regression-tests/12-rpl/code/root-node.c:#include "net/ip/uip.h"
+regression-tests/17-slip-radio/code/wait-dag.c:#include "net/ip/uip.h"
+Binary file tools/mspsim/firmware/esb/sensor-demo.esb matches
+Binary file tools/mspsim/firmware/sky/blink.sky matches
+Binary file tools/mspsim/firmware/sky/energest-demo.sky matches
+tools/wpcapslip/tcpdump.c:	     n(uip_htons(UDPBUF->destport), d(
+tools/wpcapslip/tcpdump.c:	     n(uip_htons(UDPBUF->srcport), d(
+tools/wpcapslip/tcpdump.c:		   uip_htons(UDPBUF->srcport),
+tools/wpcapslip/tcpdump.c:		   uip_htons(UDPBUF->destport));*/
+tools/wpcapslip/tcpdump.c:	     n(uip_htons(TCPBUF->destport), d(
+tools/wpcapslip/tcpdump.c:	     n(uip_htons(TCPBUF->srcport), d(
+tools/wpcapslip/tcpdump.c:		   uip_htons(TCPBUF->srcport),
+tools/wpcapslip/tcpdump.c:		   uip_htons(TCPBUF->destport),
+tools/wpcapslip/wpcap.c:#include "net/ip/uip.h"
+tools/wpcapslip/wpcapslip.c:uip_htons(uint16_t val)
+tools/wpcapslip/wpcapslip.c:uip_htonl(uint32_t val)
+tools/wpcapslip/wpcapslip.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+tools/wpcapslip/wpcapslip.c:    uint16_t nid = uip_htons(ip_id++);
+tools/wpcapslip/wpcapslip.c:  iphdr->ip_ttl = uip_htons(uip_htons(iphdr->ip_ttl) + 1);
+tools/wpcapslip/wpcapslip.c:    dhaddr.sin_port = uip_htons(dhport);
+tools/wpcapslip/wpcapslip.c:    myaddr.sin_port = uip_htons(myport);
+tools/wpcapslip/wpcapslip.c:    myaddr.sin_port = uip_htons(myport);
+tools/wpcapslip/wpcapstdio.c:uip_htons(uint16_t val)
+tools/wpcapslip/wpcapstdio.c:uip_htonl(uint32_t val)
+tools/wpcapslip/wpcapstdio.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+tools/wpcapslip/wpcapstdio.c:    uint16_t nid = uip_htons(ip_id++);
+tools/wpcapslip/wpcapstdio.c:  iphdr->ip_ttl = uip_htons(uip_htons(iphdr->ip_ttl) + 1);
+tools/wpcapslip/net/tcpdump.h:#include "net/ip/uip.h"
+tools/sky/uip6-bridge/sicslow_ethernet.c:#include "uip.h"
+tools/sky/uip6-bridge/sicslow_ethernet.c:  ETHBUF(uip_buf)->type = uip_htons(UIP_ETHTYPE_IPV6);
+tools/sky/uip6-bridge/sicslow_ethernet.c:  ETHBUF(raw_buf)->type = uip_htons(UIP_ETHTYPE_802154);
+tools/sky/uip6-bridge/sicslow_ethernet.c:  ETHBUF(raw_buf)->type = uip_htons(UIP_ETHTYPE_802154);
+tools/sky/uip6-bridge/dev/slip.c:#include "net/ip/uip.h"
+tools/sky/uip6-bridge/dev/slip.c:      memcpy(&buf[4], &uip_hostaddr, 4);
+tools/sky/uip6-bridge/dev/slip.c:	nid = uip_htons(nid);
+tools/sky/uip6-bridge/uip6-bridge-tap.c:#include "net/ip/uip.h"
+tools/sky/uip6-bridge/fakeuip.c:#include "net/ip/uip.h"
+tools/sky/uip6-bridge/fakeuip.c:uint16_t uip_htons(uint16_t val) { return UIP_HTONS(val);}
+tools/sky/uip6-bridge/fakeuip.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+tools/stm32w/uip6_bridge/sicslow_ethernet.c:#include "net/ip/uip.h"
+tools/stm32w/uip6_bridge/dev/slip.c:#include "net/ip/uip.h"
+tools/stm32w/uip6_bridge/dev/slip.c:			memcpy(&buf[4], &uip_hostaddr, 4);
+tools/stm32w/uip6_bridge/uip6-bridge-tap.c:#include "net/ip/uip.h"
+tools/stm32w/uip6_bridge/fakeuip.c:#include "net/ip/uip.h"
+tools/stm32w/wpcapslip6/fakeuip.c:#include "net/ip/uip.h"
+tools/stm32w/wpcapslip6/wpcap6.c:#include "net/ip/uip.h"
+tools/cooja/java/org/contikios/cooja/interfaces/IPAddress.java:    if (moteMem.variableExists("uip_hostaddr")) {
+tools/cooja/java/org/contikios/cooja/interfaces/IPAddress.java:              "uip_hostaddr",
+tools/cooja/java/org/contikios/cooja/interfaces/IPAddress.java:    ipList.add(new IPContainer(0, moteMem.getByteArray("uip_hostaddr", 4), true));
+tools/cooja/java/org/contikios/cooja/interfaces/IPAddress.java:        moteMem.removeVarMonitor("uip_hostaddr",memMonitor);
+tools/cooja/apps/mspsim/example/helloworld.map:uip_hostaddr        0x4               contiki-esb.a(uip.o)
+tools/cooja/apps/mspsim/example/helloworld.map:                0x000004e2                uip_hostaddr
+Binary file tools/cooja/apps/mspsim/example/helloworld.firmware matches
+Binary file tools/cooja/build/org/contikios/cooja/interfaces/IPAddress.class matches
+tools/codeprop.c:  sa.sin_port = uip_htons(port);
+core/dev/slip.c:#include "net/ip/uip.h"
+core/dev/slip.c:      memcpy(&buf[4], &uip_hostaddr, 4);
+core/dev/slip.c:	nid = uip_htons(nid);
+core/contiki-net.h:#include "net/ip/uip.h"
+core/sys/log-ng.h:#include "net/ip/uip.h"
+core/net/mac/nullmac.c:#include "net/ip/uip.h"
+core/net/rpl/rpl.c:#include "net/ip/uip.h"
+core/net/rpl/rpl.h:#include "net/ip/uip.h"
+core/net/rpl/rpl-icmp6.c:#include "net/ip/uip.h"
+core/net/rpl/rpl-private.h:#include "net/ip/uip.h"
+core/net/rpl/rpl-ext-header.c:#include "net/ip/uip.h"
+core/net/rpl/rpl-ext-header.c:#define UIP_HBHO_BUF              ((struct uip_hbho_hdr *)&uip_buf[uip_l2_l3_hdr_len])
+core/net/rpl/rpl-dag.c:#include "net/ip/uip.h"
+core/net/rpl/rpl-ns.c:#include "net/ip/uip.h"
+core/net/llsec/llsec802154.h:#include "net/ip/uip.h"
+core/net/ipv4/uip-over-mesh.c:	 uip_hostaddr.u8[0], uip_hostaddr.u8[1],
+core/net/ipv4/uip-over-mesh.c:	 uip_hostaddr.u8[2], uip_hostaddr.u8[3]);
+core/net/ipv4/uaodv-def.h:#include "net/ip/uip.h"
+core/net/ipv4/uip_arp.h:#include "net/ip/uip.h"
+core/net/ipv4/uip-fw.h:#include "net/ip/uip.h"
+core/net/ipv4/uip-neighbor.h:#include "net/ip/uip.h"
+core/net/ipv4/uip.c:#include "net/ip/uip.h"
+core/net/ipv4/uip.c:const uip_ipaddr_t uip_hostaddr =
+core/net/ipv4/uip.c:uip_ipaddr_t uip_hostaddr, uip_draddr, uip_netmask;
+core/net/ipv4/uip.c:  return uip_htons(chksum(0, (uint8_t *)data, len));
+core/net/ipv4/uip.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+core/net/ipv4/uip.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+core/net/ipv4/uip.c:  /*  uip_hostaddr[0] = uip_hostaddr[1] = 0;*/
+core/net/ipv4/uip.c:       conn->lport == uip_htons(lastport)) {
+core/net/ipv4/uip.c:  conn->lport = uip_htons(lastport);
+core/net/ipv4/uip.c:    if(uip_udp_conns[c].lport == uip_htons(lastport)) {
+core/net/ipv4/uip.c:  if(uip_ipaddr_cmp(&uip_hostaddr, &uip_all_zeroes_addr)) {
+core/net/ipv4/uip.c:    if(!uip_ipaddr_cmp(&BUF->destipaddr, &uip_hostaddr)) {
+core/net/ipv4/uip.c:    if(!uip_ipaddr_cmp(&BUF->destipaddr, &uip_hostaddr) &&
+core/net/ipv4/uip.c:  if(uip_ipaddr_cmp(&uip_hostaddr, &uip_all_zeroes_addr)) {
+core/net/ipv4/uip.c:    uip_hostaddr = BUF->destipaddr;
+core/net/ipv4/uip.c:  uip_ipaddr_copy(&BUF->srcipaddr, &uip_hostaddr);
+core/net/ipv4/uip.c:    if(uip_ipaddr_cmp(&ICMPBUF->icmp6data, &uip_hostaddr)) {
+core/net/ipv4/uip.c:      uip_ipaddr_copy(&ICMPBUF->srcipaddr, &uip_hostaddr);
+core/net/ipv4/uip.c:    uip_ipaddr_copy(&BUF->srcipaddr, &uip_hostaddr);
+core/net/ipv4/uip.c:  uip_ipaddr_copy(&BUF->srcipaddr, &uip_hostaddr);
+core/net/ipv4/uip.c:  uip_ipaddr_copy(&BUF->srcipaddr, &uip_hostaddr);
+core/net/ipv4/uip.c:  uip_ipaddr_copy(&BUF->srcipaddr, &uip_hostaddr);
+core/net/ipv4/uip.c:  uip_ipaddr_copy(&BUF->srcipaddr, &uip_hostaddr);
+core/net/ipv4/uip.c:uip_htons(uint16_t val)
+core/net/ipv4/uip.c:uip_htonl(uint32_t val)
+core/net/ipv4/uip-fw.c:#include "net/ip/uip.h"
+core/net/ipv4/uip-fw.c:  uip_ipaddr_copy(&BUF->srcipaddr, &uip_hostaddr);
+core/net/ipv4/uip-fw.c:  if(uip_ipaddr_cmp(&BUF->destipaddr, &uip_hostaddr)) {
+core/net/ipv4/uip-fw.c:  if(uip_ipaddr_cmp(&uip_hostaddr, &uip_all_zeroes_addr) &&
+core/net/ipv4/uip_arp.c:     (uip_hostaddr[0] & uip_netmask[0])) {
+core/net/ipv4/uip_arp.c:     (uip_hostaddr[1] & uip_netmask[1])) {
+core/net/ipv4/uip_arp.c:    /*    if(BUF->dipaddr[0] == uip_hostaddr[0] &&
+core/net/ipv4/uip_arp.c:	  BUF->dipaddr[1] == uip_hostaddr[1]) {*/
+core/net/ipv4/uip_arp.c:	   uip_hostaddr.u8[0], uip_hostaddr.u8[1],
+core/net/ipv4/uip_arp.c:	   uip_hostaddr.u8[2], uip_hostaddr.u8[3]);
+core/net/ipv4/uip_arp.c:    if(uip_ipaddr_cmp(&BUF->dipaddr, &uip_hostaddr)) {
+core/net/ipv4/uip_arp.c:      uip_ipaddr_copy(&BUF->sipaddr, &uip_hostaddr);
+core/net/ipv4/uip_arp.c:    if(uip_ipaddr_cmp(&BUF->dipaddr, &uip_hostaddr)) {
+core/net/ipv4/uip_arp.c:    if(!uip_ipaddr_maskcmp(&IPBUF->destipaddr, &uip_hostaddr, &uip_netmask)) {
+core/net/ipv4/uip_arp.c:      uip_ipaddr_copy(&BUF->sipaddr, &uip_hostaddr);
+core/net/ipv4/uaodv.c:    return uip_htonl(route->hseqno);
+core/net/ipv4/uaodv.c:  printf("%d.%d.%d.%d: ", uip_ipaddr_to_quad(&uip_hostaddr));
+core/net/ipv4/uaodv.c:      a->u16[0] = uip_hostaddr.u16[0];
+core/net/ipv4/uaodv.c:  rm->rreq_id = uip_htonl(rreq_id++);
+core/net/ipv4/uaodv.c:  rm->orig_seqno = uip_htonl(my_hseqno);
+core/net/ipv4/uaodv.c:  if(uip_ipaddr_cmp(&rm->orig_addr, &uip_hostaddr)) {
+core/net/ipv4/uaodv.c:	  if(uip_ipaddr_cmp(a, &uip_hostaddr)) {
+core/net/ipv4/uaodv.c:  if(uip_ipaddr_cmp(&rm->dest_addr, &uip_hostaddr)
+core/net/ipv4/uaodv.c:    net_seqno = uip_htonl(fw->hseqno);
+core/net/ipv4/uaodv.c:  } else if(uip_ipaddr_cmp(&rm->dest_addr, &uip_hostaddr)) {
+core/net/ipv4/uaodv.c:    net_seqno = uip_htonl(my_hseqno);
+core/net/ipv4/uaodv.c:    net_seqno = uip_htonl(my_hseqno);
+core/net/ipv4/uaodv.c:    send_rrep(&uip_hostaddr, &BUF->srcipaddr, &BUF->srcipaddr, &net_seqno, 0);
+core/net/ipv4/uaodv.c:  if(uip_ipaddr_cmp(&rm->orig_addr, &uip_hostaddr)) {
+core/net/ipv4/uaodv.c:  if(uip_ipaddr_cmp(&rm->unreach[0].addr, &uip_hostaddr))
+core/net/ipv4/uaodv.c:	rm->unreach[0].seqno = uip_htonl(rt->hseqno);
+core/net/ipv4/uaodv.c:    bad_seqno = uip_htonl(rt->hseqno);
+core/net/ipv4/uip-over-mesh.h:#include "net/ip/uip.h"
+core/net/sdn/sdn-conf.h:#include "net/ip/uip.h"
+core/net/sdn/sdn.h:#include "net/ip/uip.h"
+core/net/sdn/sdn-ft.c:#include "net/ip/uip.h"
+core/net/sdn/sdn-ext-header.c:#include "net/ip/uip.h"
+core/net/sdn/sdn.c:#include "net/ip/uip.h"
+core/net/sdn/sdn-cd.c:#include "net/ip/uip.h"
+core/net/sdn/usdn/usdn-engine.c:#include "net/ip/uip.h"
+core/net/sdn/usdn/usdn-adapter.c:#include "net/ip/uip.h"
+core/net/sdn/usdn/usdn.h:#include "net/ip/uip.h"
+core/net/sdn/usdn/usdn-driver.c:#include "net/ip/uip.h"
+core/net/sdn/sdn-packetbuf.c:#include "net/ip/uip.h"
+core/net/sdn/sdn-cd.h:#include "net/ip/uip.h"
+core/net/sdn/sdn-ft.h:#include "net/ip/uip.h"
+core/net/ipv6/uip-nd6.h:#include "net/ip/uip.h"
+core/net/ipv6/uip-icmp6.h:#include "net/ip/uip.h"
+core/net/ipv6/uip-ds6.h:#include "net/ip/uip.h"
+core/net/ipv6/uip-ds6-nbr.h:#include "net/ip/uip.h"
+core/net/ipv6/uip6.c:#include "net/ip/uip.h"
+core/net/ipv6/uip6.c:#define UIP_HBHO_BUF                      ((struct uip_hbho_hdr *)&uip_buf[uip_l2_l3_hdr_len])
+core/net/ipv6/uip6.c:  return uip_htons(chksum(0, (uint8_t *)data, len));
+core/net/ipv6/uip6.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+core/net/ipv6/uip6.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+core/net/ipv6/uip6.c:       conn->lport == uip_htons(lastport)) {
+core/net/ipv6/uip6.c:  conn->lport = uip_htons(lastport);
+core/net/ipv6/uip6.c:    if(uip_udp_conns[c].lport == uip_htons(lastport)) {
+core/net/ipv6/uip6.c:uip_htons(uint16_t val)
+core/net/ipv6/uip6.c:uip_htonl(uint32_t val)
+core/net/ipv6/multicast/uip-mcast6-route.c:#include "net/ip/uip.h"
+core/net/ipv6/multicast/uip-mcast6-route.h:#include "net/ip/uip.h"
+core/net/ipv6/multicast/roll-tm.c:        val = uip_htons(*seq_ptr);
+core/net/ipv6/multicast/esmrf.c:#include "net/ip/uip.h"
+core/net/ipv6/uip-icmp6.c:  UIP_ICMP6_ERROR_BUF->param = uip_htonl(param);
+core/net/ipv6/sicslowpan.c:#include "net/ip/uip.h"
+core/net/ipv6/sicslowpan.c:/*       uip_htons((SICSLOWPAN_DISPATCH_FRAG1 << 8) | uip_len); */
+core/net/ipv6/sicslowpan.c:/*       uip_htons((SICSLOWPAN_DISPATCH_FRAGN << 8) | uip_len); */
+core/net/ipv6/sicslowpan.h:#include "net/ip/uip.h"
+core/net/ipv6/uip-ds6-route.h:#include "net/ip/uip.h"
+core/net/ipv6/uip-ds6-route.c:#include "net/ip/uip.h"
+core/net/ipv6/uip-nd6.c:  UIP_ND6_RA_BUF->router_lifetime = uip_htons(UIP_ND6_ROUTER_LIFETIME);
+core/net/ipv6/uip-nd6.c:  //UIP_ND6_RA_BUF->reachable_time = uip_htonl(uip_ds6_if.reachable_time);
+core/net/ipv6/uip-nd6.c:  //UIP_ND6_RA_BUF->retrans_timer = uip_htonl(uip_ds6_if.retrans_timer);
+core/net/ipv6/uip-nd6.c:      UIP_ND6_OPT_PREFIX_BUF->validlt = uip_htonl(prefix->vlifetime);
+core/net/ipv6/uip-nd6.c:      UIP_ND6_OPT_PREFIX_BUF->preferredlt = uip_htonl(prefix->plifetime);
+core/net/ipv6/uip-nd6.c:  //UIP_ND6_OPT_MTU_BUF->mtu = uip_htonl(uip_ds6_if.link_mtu);
+core/net/ipv6/uip-nd6.c:  UIP_ND6_OPT_MTU_BUF->mtu = uip_htonl(1500);
+core/net/net-debug.h:#include "net/ip/uip.h"
+core/net/ip64/ip64-addrmap.c:  printf("lookup ip4port %d ip6port %d\n", uip_htons(ip4port),
+core/net/ip64/ip64-addrmap.c:	 uip_htons(ip6port));
+core/net/ip64/ip64-ipv4-dhcp.c:uip_ipaddr_t uip_hostaddr; /* Needed because it is referenced by dhcpc.c */
+core/net/ip64/ip64-dhcpc.c:  /*  uip_ipaddr_copy(m->ciaddr, uip_hostaddr);*/
+core/net/ip64/ip64-dhcpc.c:  memcpy(m->ciaddr, uip_hostaddr.u16, sizeof(m->ciaddr));
+core/net/ip64/ip64.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+core/net/ip64/ip64.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+core/net/ip64/ip64.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+core/net/ip64/ip64.c:	udphdr->srcport = uip_htons(newport);
+core/net/ip64/ip64.c:	       uip_htons(m->mapped_port));
+core/net/ip64/ip64.c:      udphdr->srcport = uip_htons(m->mapped_port);
+core/net/ip64/ip64.c:      if(uip_htons(tcphdr->destport) < EPHEMERAL_PORTRANGE) {
+core/net/ip64/ip64.c:	       tcphdr->destport, uip_htons(tcphdr->destport));
+core/net/ip64/ip64.c:      } else if(ip64_special_ports_incoming_is_special(uip_htons(tcphdr->destport))) {
+core/net/ip64/ip64.c:	       tcphdr->destport, uip_htons(tcphdr->destport));
+core/net/ip64/ip64.c:	if(ip64_special_ports_translate_incoming(uip_htons(tcphdr->destport),
+core/net/ip64/ip64.c:	  tcphdr->destport = uip_htons(newport);
+core/net/ip64/ip64.c:		 tcphdr->destport, uip_htons(tcphdr->destport));
+core/net/ip64/ip64.c:	udphdr->destport = uip_htons(m->ip6port);
+core/net/ip64/ip64-addrmap.h:#include "net/ip/uip.h"
+core/net/ip64/ip64-eth-interface.c:#include "net/ip/uip.h"
+core/net/ip64/ip64-slip-interface.c:#include "net/ip/uip.h"
+core/net/ip64/ip64-eth-interface.h:#include "net/ip/uip.h"
+core/net/ip64/ip64.h:#include "net/ip/uip.h"
+core/net/ip64/ip64-arp.h:#include "net/ip/uip.h"
+core/net/ip/uip-split.c:#include "net/ip/uip.h"
+core/net/ip/slipdev.h:#include "uip.h"
+core/net/ip/resolv.h:#include "uip.h"
+core/net/ip/uip-udp-packet.h:#include "net/ip/uip.h"
+core/net/ip/resolv.c:                   uip_htons(question->type), uip_htons(question->class));
+core/net/ip/resolv.c:    queryptr = (unsigned char *)skip_name(queryptr) + 10 + uip_htons(ans->len);
+core/net/ip/resolv.c:     && uip_ipaddr_cmp(&uip_hostaddr, ipaddr) != 0
+core/net/ip/tcp-socket.h:#include "uip.h"
+core/net/ip/udp-socket.h:#include "net/ip/uip.h"
+core/net/ip/uip_arch.h:#include "net/ip/uip.h"
+core/net/ip/uiplib.c:#include "net/ip/uip.h"
+core/net/ip/uiplib.h:#include "net/ip/uip.h"
+core/net/ip/uip.h:#define uip_sethostaddr(addr) uip_ipaddr_copy(&uip_hostaddr, (addr))
+core/net/ip/uip.h:#define uip_gethostaddr(addr) uip_ipaddr_copy((addr), &uip_hostaddr)
+core/net/ip/uip.h: * order, a conversion using UIP_HTONS() or uip_htons() is necessary.
+core/net/ip/uip.h: * order, a conversion using UIP_HTONS() or uip_htons() is necessary.
+core/net/ip/uip.h: * byte order, a conversion using UIP_HTONS() or uip_htons() is necessary.
+core/net/ip/uip.h: * network byte order, use the uip_htons() function instead.
+core/net/ip/uip.h:#ifndef uip_htons
+core/net/ip/uip.h:CCIF uint16_t uip_htons(uint16_t val);
+core/net/ip/uip.h:#endif /* uip_htons */
+core/net/ip/uip.h:#define uip_ntohs uip_htons
+core/net/ip/uip.h:#ifndef uip_htonl
+core/net/ip/uip.h:CCIF uint32_t uip_htonl(uint32_t val);
+core/net/ip/uip.h:#endif /* uip_htonl */
+core/net/ip/uip.h:#define uip_ntohl uip_htonl
+core/net/ip/uip.h:typedef struct uip_hbho_hdr {
+core/net/ip/uip.h:} uip_hbho_hdr;
+core/net/ip/uip.h:CCIF extern const uip_ipaddr_t uip_hostaddr, uip_netmask, uip_draddr;
+core/net/ip/uip.h:CCIF extern uip_ipaddr_t uip_hostaddr, uip_netmask, uip_draddr;
+core/net/ip/simple-udp.h:#include "net/ip/uip.h"
+core/net/ip/ip64-addr.h:#include "net/ip/uip.h"
+core/net/ip/uip-debug.h:#include "net/ip/uip.h"
+core/net/ip/dhcpc.c:  /*  uip_ipaddr_copy(m->ciaddr, uip_hostaddr);*/
+core/net/ip/dhcpc.c:  memcpy(m->ciaddr, uip_hostaddr.u16, sizeof(m->ciaddr));
+core/net/ip/uip-packetqueue.c:#include "net/ip/uip.h"
+core/net/ip/tcpip.h:#include "net/ip/uip.h"
+core/net/ip/tcpip.h: * functions UIP_HTONS() and uip_htons() can be used to convert port numbers
+core/net/ip/tcpip.h: * functions UIP_HTONS() and uip_htons() can be used to convert port numbers
+core/net/ip/slipdev.c:#include "uip.h"
+core/net/ip/tcp-socket.c:	   s->listen_port == uip_htons(uip_conn->lport)) {
+core/net/ip/tcp-socket.c:  s->c = tcp_connect(ipaddr, uip_htons(port), s);
+core/net/ip/tcp-socket.c:  tcp_listen(uip_htons(port));
+core/net/ip/tcp-socket.c:  tcp_unlisten(uip_htons(s->listen_port));
+examples/ipso-objects/serial-protocol.c:#include "net/ip/uip.h"
+examples/ipso-objects/example-server.c:#include "net/ip/uip.h"
+examples/sky-ip/sky-telnet-server.c:  snprintf(buf, sizeof(buf), "%d.%d.%d.%d", uip_ipaddr_to_quad(&uip_hostaddr));
+examples/sky-ip/telnet-webserver.c:  snprintf(buf, sizeof(buf), "%d.%d.%d.%d", uip_ipaddr_to_quad(&uip_hostaddr));
+examples/udp-stream/udp-stream.c:#include "uip.h"
+examples/cc26xx/cc26xx-web-demo/net-uart.c:#include "net/ip/uip.h"
+examples/cc26xx/cc26xx-web-demo/cetic-6lbr-client.c:#include "net/ip/uip.h"
+examples/cc26xx/cc26xx-web-demo/net-uart.h:#include "net/ip/uip.h"
+examples/cc26xx/cc26xx-web-demo/mqtt-client.c:#include "net/ip/uip.h"
+examples/cc2538-common/mqtt-demo/mqtt-demo.c:#include "net/ip/uip.h"
+examples/ravenusbstick/ravenusbstick.c://#include "uip.h"
+examples/ravenusbstick/fakeuip.c:#include "uip.h"
+examples/ravenusbstick/fakeuip.c:uint16_t uip_htons(uint16_t val) { return UIP_HTONS(val);}
+examples/ravenusbstick/fakeuip.c:  return (sum == 0) ? 0xffff : uip_htons(sum);
+examples/stm32nucleo-spirit1/sensor-demo/sensor-demo.c:#include "net/ip/uip.h"
+examples/nrf52dk/mqtt-demo/mqtt-demo.c:#include "net/ip/uip.h"
+examples/nrf52dk/coap-demo/coap-server.c:#include "uip.h"
+Binary file examples/udp-ipv6/udp-client.minimal-net matches
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-icmp6.o matches
+examples/udp-ipv6/obj_minimal-net/tcpip.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/tcpip.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/tcpip.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/tcpip.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/tcpip.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/tcpip.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/uip-udp-packet.o matches
+examples/udp-ipv6/obj_minimal-net/slipdev.d: ../../core/net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/slipdev.d: ../../core/./net/ip/uip.h ../../core/net/ip/slipdev.h
+examples/udp-ipv6/obj_minimal-net/slipdev.d: ../../core/net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/slipdev.d: ../../core/./net/ip/uip.h ../../core/net/ip/slipdev.h :
+examples/udp-ipv6/obj_minimal-net/resolv.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/resolv.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/resolv.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/resolv.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/psock.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/psock.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/udp-ipv6/obj_minimal-net/psock.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/udp-ipv6/obj_minimal-net/psock.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/psock.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/udp-ipv6/obj_minimal-net/psock.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-ext-header.o matches
+examples/udp-ipv6/obj_minimal-net/uip-debug.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/uip-debug.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/websocket-http-client.d: ../../core/net/ip/tcp-socket.h ../../core/net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/websocket-http-client.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uiplib.h \
+examples/udp-ipv6/obj_minimal-net/websocket-http-client.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/websocket-http-client.d: ../../core/net/ip/tcp-socket.h ../../core/net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/websocket-http-client.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uiplib.h :
+examples/udp-ipv6/obj_minimal-net/websocket-http-client.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/udp-socket.o matches
+examples/udp-ipv6/obj_minimal-net/nbr-table.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/nbr-table.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/queuebuf.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/sicslowpan.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/uip-debug.o matches
+examples/udp-ipv6/obj_minimal-net/tcp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/tcp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/udp-ipv6/obj_minimal-net/tcp-socket.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/tcp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/tcp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/udp-ipv6/obj_minimal-net/tcp-socket.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/dhcpc.o matches
+examples/udp-ipv6/obj_minimal-net/linuxradio-drv.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/linuxradio-drv.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/netstack.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/netstack.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/psock.o matches
+examples/udp-ipv6/obj_minimal-net/tapdev-drv.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/tapdev-drv.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/tapdev-drv.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/tapdev-drv.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/tapdev-drv.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/tapdev-drv.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/uip-nd6.d: ../../core/./net/ipv6/uip-icmp6.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/uip-nd6.d: ../../core/./net/ipv6/uip-icmp6.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/contiki-main.o matches
+examples/udp-ipv6/obj_minimal-net/rpl-ns.d: ../../platform/minimal-net/./contiki-conf.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/rpl-ns.d: ../../platform/minimal-net/./contiki-conf.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/tapdev6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/tapdev6.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/udp-ipv6/obj_minimal-net/tapdev6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/udp-ipv6/obj_minimal-net/tapdev6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/tapdev6.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/udp-ipv6/obj_minimal-net/tapdev6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+Binary file examples/udp-ipv6/obj_minimal-net/resolv.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/netstack.o matches
+examples/udp-ipv6/obj_minimal-net/sicslowpan.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/sicslowpan.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/packetbuf.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/packetbuf.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/packetbuf.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/packetbuf.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/packetbuf.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/packetbuf.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/ip64-addr.o matches
+examples/udp-ipv6/obj_minimal-net/uip-nameserver.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/uip-nameserver.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/udp-ipv6/obj_minimal-net/uip-nameserver.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/udp-ipv6/obj_minimal-net/uip-nameserver.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/uip-nameserver.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/udp-ipv6/obj_minimal-net/uip-nameserver.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+Binary file examples/udp-ipv6/obj_minimal-net/uip-split.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-nbr-policy.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/log-ng.o matches
+examples/udp-ipv6/obj_minimal-net/rpl-nbr-policy.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/rpl-nbr-policy.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/rpl-of0.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/rpl-of0.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/linuxradio-drv.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/uiplib.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/tcp-socket.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/tapdev6.o matches
+examples/udp-ipv6/obj_minimal-net/dhcpc.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/dhcpc.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/udp-ipv6/obj_minimal-net/dhcpc.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/udp-ipv6/obj_minimal-net/dhcpc.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/dhcpc.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/udp-ipv6/obj_minimal-net/dhcpc.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+examples/udp-ipv6/obj_minimal-net/tapdev.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/tapdev.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/compower.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/compower.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/websocket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/websocket.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/websocket.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/websocket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/websocket.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/websocket.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/uip-split.d: ../../core/./net/ip/uip-split.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/uip-split.d: ../../core/./net/ip/uip-split.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/uip-packetqueue.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/uip-packetqueue.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/tapdev.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/nbr-table.o matches
+examples/udp-ipv6/obj_minimal-net/rpl-dag-root.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/rpl-dag-root.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/udp-ipv6/obj_minimal-net/rpl-dag-root.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/udp-ipv6/obj_minimal-net/rpl-dag-root.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/rpl-dag-root.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/udp-ipv6/obj_minimal-net/rpl-dag-root.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+examples/udp-ipv6/obj_minimal-net/uiplib.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/uiplib.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/net-debug.d: ../../core/./net/net-debug.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/net-debug.d: ../../core/./net/net-debug.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/uip-udp-packet.d: ../../core/./net/ip/uip-udp-packet.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/uip-udp-packet.d: ../../core/./net/ip/uip-udp-packet.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-dag-root.o matches
+examples/udp-ipv6/obj_minimal-net/log-ng.d: ../../core/./sys/log-ng-conf.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/log-ng.d: ../../core/./sys/log-ng-conf.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/tcpip.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/packetbuf.o matches
+examples/udp-ipv6/obj_minimal-net/slip.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/slip.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/websocket-http-client.o matches
+examples/udp-ipv6/obj_minimal-net/queuebuf.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/queuebuf.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/queuebuf.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/queuebuf.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/queuebuf.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/queuebuf.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/uip-nameserver.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/simple-udp.o matches
+examples/udp-ipv6/obj_minimal-net/uip6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/uip6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/uip-packetqueue.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/tapdev-drv.o matches
+examples/udp-ipv6/obj_minimal-net/print-stats.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/print-stats.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-dag.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-ns.o matches
+examples/udp-ipv6/obj_minimal-net/rpl-timers.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/rpl-timers.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/rpl-dag.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/rpl-dag.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/compower.o matches
+examples/udp-ipv6/obj_minimal-net/ip64-addr.d: ../../core/net/ip/ip64-addr.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/ip64-addr.d: ../../core/net/ip/ip64-addr.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/rpl-icmp6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/rpl-icmp6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/rpl.d:obj_minimal-net/rpl.o: ../../core/net/rpl/rpl.c ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/rpl.d:../../core/net/rpl/rpl.c ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/net-debug.o matches
+examples/udp-ipv6/obj_minimal-net/uip-ds6-nbr.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/uip-ds6-nbr.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/rpl-mrhof.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/rpl-mrhof.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/websocket.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/rpl.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/uip6.o matches
+examples/udp-ipv6/obj_minimal-net/link-stats.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/link-stats.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/slipdev.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/slip.o matches
+examples/udp-ipv6/obj_minimal-net/simple-udp.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/simple-udp.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/simple-udp.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/simple-udp.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/simple-udp.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/simple-udp.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/rpl-ext-header.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/rpl-ext-header.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/uip-nd6.o matches
+examples/udp-ipv6/obj_minimal-net/contiki-main.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/contiki-main.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/udp-ipv6/obj_minimal-net/contiki-main.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/udp-ipv6/obj_minimal-net/contiki-main.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/contiki-main.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/udp-ipv6/obj_minimal-net/contiki-main.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-sdn.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/uip-ds6-route.o matches
+examples/udp-ipv6/obj_minimal-net/uip-ds6-route.d: ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/uip-ds6-route.d: ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-mrhof.o matches
+examples/udp-ipv6/obj_minimal-net/uip-icmp6.d: ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/uip-icmp6.d: ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/udp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/udp-socket.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/udp-socket.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/udp-ipv6/obj_minimal-net/udp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/udp-socket.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/udp-ipv6/obj_minimal-net/udp-socket.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/udp-ipv6/obj_minimal-net/link-stats.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-timers.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/rpl-of0.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/uip-icmp6.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/uip-ds6-nbr.o matches
+examples/udp-ipv6/obj_minimal-net/rpl-sdn.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/rpl-sdn.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/udp-ipv6/obj_minimal-net/uip-ds6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/udp-ipv6/obj_minimal-net/uip-ds6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/udp-ipv6/obj_minimal-net/uip-ds6.o matches
+Binary file examples/udp-ipv6/obj_minimal-net/print-stats.o matches
+Binary file examples/udp-ipv6/udp-server.minimal-net matches
+examples/jn516x/rpl/border-router/slip-bridge.c:#include "net/ip/uip.h"
+examples/jn516x/rpl/tools/rpl-tools.c:#include "net/ip/uip.h"
+examples/jn516x/rpl/coap-dongle-node/dongle-node.c:#include "net/ip/uip.h"
+examples/jn516x/rpl/coap-dr1175-node/dr1175-node.c:#include "net/ip/uip.h"
+examples/jn516x/rpl/coap-dr1199-node/dr1199-node.c:#include "net/ip/uip.h"
+examples/jn516x/tsch/uart1-test-node/uart1-test-node.c:#include "net/ip/uip.h"
+examples/jn516x/tsch/tools/rpl-tools.c:#include "net/ip/uip.h"
+examples/jn516x/tsch/simple-sensor-network/rpl-border-router/slip-bridge.c:#include "net/ip/uip.h"
+examples/jn516x/tsch/simple-sensor-network/rpl-border-router/border-router.c:#include "net/ip/uip.h"
+examples/jn516x/tsch/tx-power-verification/rpl-border-router/rpl-border-router.c:#include "net/ip/uip.h"
+examples/jn516x/tsch/tx-power-verification/rpl-border-router/slip-bridge.c:#include "net/ip/uip.h"
+examples/jn516x/tsch/tx-power-verification/node/node.c:#include "net/ip/uip.h"
+examples/cc2530dk/border-router/slip-bridge.c:#include "net/ip/uip.h"
+examples/sdn/controller/contiki-exp5438.map: .any.text.uip_htons
+examples/sdn/controller/contiki-exp5438.map: .any.text.uip_htonl
+examples/sdn/controller/contiki-exp5438.map:                0x000000000000cfcc                uip_htonl
+Binary file examples/sdn/controller/obj_exp5438/usdn-engine.o matches
+Binary file examples/sdn/controller/obj_exp5438/usdn-driver.o matches
+Binary file examples/sdn/controller/obj_exp5438/rpl-icmp6.o matches
+examples/sdn/controller/obj_exp5438/sdn-packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/sdn-packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/sdn-cd.d: ../../../core/./sys/node-id.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/sdn-cd.d: ../../../core/./sys/node-id.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/tcpip.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/tcpip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/tcpip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/tcpip.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/tcpip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/tcpip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/uip-udp-packet.o matches
+examples/sdn/controller/obj_exp5438/slipdev.d: ../../../core/net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/slipdev.d: ../../../core/./net/ip/uip.h ../../../core/net/ip/slipdev.h
+examples/sdn/controller/obj_exp5438/slipdev.d: ../../../core/net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/slipdev.d: ../../../core/./net/ip/uip.h ../../../core/net/ip/slipdev.h :
+examples/sdn/controller/obj_exp5438/resolv.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/resolv.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uip-udp-packet.h \
+examples/sdn/controller/obj_exp5438/resolv.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/resolv.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uip-udp-packet.h :
+examples/sdn/controller/obj_exp5438/psock.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/psock.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/psock.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/psock.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/psock.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/psock.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/rpl-ext-header.o matches
+Binary file examples/sdn/controller/obj_exp5438/atom-app-route-sp.o matches
+examples/sdn/controller/obj_exp5438/atom-buffer.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/atom-buffer.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/phase.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/phase.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/framer-802154.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/framer-802154.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/uip-debug.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/uip-debug.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/websocket-http-client.d: ../../../core/net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/websocket-http-client.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/websocket-http-client.d: ../../../core/./net/ip/uip.h ../../../core/net/ip/ip64-addr.h \
+examples/sdn/controller/obj_exp5438/websocket-http-client.d: ../../../core/net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/websocket-http-client.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/websocket-http-client.d: ../../../core/./net/ip/uip.h ../../../core/net/ip/ip64-addr.h :
+Binary file examples/sdn/controller/obj_exp5438/phase.o matches
+Binary file examples/sdn/controller/obj_exp5438/udp-socket.o matches
+examples/sdn/controller/obj_exp5438/nbr-table.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/nbr-table.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/sdn-stats.o matches
+examples/sdn/controller/obj_exp5438/nullmac.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/nullmac.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/atom-app-route-rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/atom-app-route-rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/nullsec.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/nullsec.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/atom-app-join-cfg.o matches
+Binary file examples/sdn/controller/obj_exp5438/queuebuf.o matches
+Binary file examples/sdn/controller/obj_exp5438/sicslowpan.o matches
+Binary file examples/sdn/controller/obj_exp5438/uip-debug.o matches
+examples/sdn/controller/obj_exp5438/frame802154e-ie.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/frame802154e-ie.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/ccm-star-packetbuf.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/ccm-star-packetbuf.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/nullmac.o matches
+Binary file examples/sdn/controller/obj_exp5438/dhcpc.o matches
+examples/sdn/controller/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/netstack.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/netstack.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/nullrdc-noframer.o matches
+Binary file examples/sdn/controller/obj_exp5438/psock.o matches
+examples/sdn/controller/obj_exp5438/sdn-ext-header.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/sdn-ext-header.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/atom.o matches
+Binary file examples/sdn/controller/obj_exp5438/sdn-cd.o matches
+examples/sdn/controller/obj_exp5438/uip-nd6.d: ../../../core/./net/ipv6/uip-icmp6.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/uip-nd6.d: ../../../core/./net/ipv6/uip-icmp6.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/framer-nullmac.o matches
+Binary file examples/sdn/controller/obj_exp5438/ccm-star-packetbuf.o matches
+examples/sdn/controller/obj_exp5438/sdn.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/sdn.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/rpl-ns.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/rpl-ns.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/contiki-exp5438-main.d: ../../../core/./net/llsec/llsec802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/contiki-exp5438-main.d: ../../../core/./net/llsec/llsec802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/resolv.o matches
+Binary file examples/sdn/controller/obj_exp5438/netstack.o matches
+Binary file examples/sdn/controller/obj_exp5438/csma.o matches
+examples/sdn/controller/obj_exp5438/sicslowpan.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/sicslowpan.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/packetbuf.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/packetbuf.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/atom-sb-usdn.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/atom-sb-usdn.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/atom-sb-usdn.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/atom-sb-usdn.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/atom-sb-usdn.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/atom-sb-usdn.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/ip64-addr.o matches
+Binary file examples/sdn/controller/obj_exp5438/anti-replay.o matches
+examples/sdn/controller/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/uip-split.o matches
+examples/sdn/controller/obj_exp5438/sdn-ft.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/sdn-ft.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/nullrdc.o matches
+Binary file examples/sdn/controller/obj_exp5438/rpl-nbr-policy.o matches
+examples/sdn/controller/obj_exp5438/atom-net.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/atom-net.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/log-ng.o matches
+Binary file examples/sdn/controller/obj_exp5438/mac-sequence.o matches
+examples/sdn/controller/obj_exp5438/frame802154.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/frame802154.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/rpl-nbr-policy.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/rpl-nbr-policy.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/rpl-of0.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/rpl-of0.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/sdn-ext-header.o matches
+Binary file examples/sdn/controller/obj_exp5438/uiplib.o matches
+Binary file examples/sdn/controller/obj_exp5438/contikimac-framer.o matches
+examples/sdn/controller/obj_exp5438/multiflow.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/multiflow.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/tcp-socket.o matches
+examples/sdn/controller/obj_exp5438/dhcpc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/dhcpc.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/dhcpc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/dhcpc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/dhcpc.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/dhcpc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/usdn-adapter.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/usdn-adapter.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/msp430.o matches
+examples/sdn/controller/obj_exp5438/compower.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/compower.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/websocket.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/websocket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/websocket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/websocket.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/websocket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/websocket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/uip-split.d: ../../../core/./net/ip/uip-split.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/uip-split.d: ../../../core/./net/ip/uip-split.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/sdn-ft.o matches
+examples/sdn/controller/obj_exp5438/uip-packetqueue.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/uip-packetqueue.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/contikimac-framer.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/contikimac-framer.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/nbr-table.o matches
+examples/sdn/controller/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/atom-app-route-rpl.o matches
+examples/sdn/controller/obj_exp5438/uiplib.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/uiplib.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/net-debug.d: ../../../core/./net/net-debug.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/net-debug.d: ../../../core/./net/net-debug.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/uip-udp-packet.d: ../../../core/./net/ip/uip-udp-packet.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/uip-udp-packet.d: ../../../core/./net/ip/uip-udp-packet.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/rpl-dag-root.o matches
+Binary file examples/sdn/controller/obj_exp5438/usdn-adapter.o matches
+examples/sdn/controller/obj_exp5438/log-ng.d: ../../../core/./sys/log-ng-conf.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/log-ng.d: ../../../core/./sys/log-ng-conf.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/multiflow.o matches
+Binary file examples/sdn/controller/obj_exp5438/tcpip.o matches
+examples/sdn/controller/obj_exp5438/atom-sb-rpl.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/atom-sb-rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/atom-sb-rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/atom-sb-rpl.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/atom-sb-rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/atom-sb-rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/packetbuf.o matches
+Binary file examples/sdn/controller/obj_exp5438/atom-net.o matches
+examples/sdn/controller/obj_exp5438/framer-nullmac.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/framer-nullmac.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/slip.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/slip.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/contikimac.o matches
+Binary file examples/sdn/controller/obj_exp5438/websocket-http-client.o matches
+examples/sdn/controller/obj_exp5438/nullrdc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/nullrdc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/queuebuf.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/queuebuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/queuebuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/queuebuf.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/queuebuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/queuebuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/uip-nameserver.o matches
+Binary file examples/sdn/controller/obj_exp5438/atom-sb-usdn.o matches
+Binary file examples/sdn/controller/obj_exp5438/simple-udp.o matches
+examples/sdn/controller/obj_exp5438/uip6.d: ../../../core/./sys/cc-gcc.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/uip6.d: ../../../core/./sys/cc-gcc.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/nullrdc-noframer.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/nullrdc-noframer.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/uip-packetqueue.o matches
+examples/sdn/controller/obj_exp5438/nordc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/nordc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/sdn.o matches
+Binary file examples/sdn/controller/obj_exp5438/atom-sb-rpl.o matches
+examples/sdn/controller/obj_exp5438/anti-replay.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/anti-replay.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/atom.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/atom.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/atom.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/atom.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/atom.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/atom.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/frame802154e-ie.o matches
+examples/sdn/controller/obj_exp5438/print-stats.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/print-stats.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/rpl-dag.o matches
+Binary file examples/sdn/controller/obj_exp5438/rpl-ns.o matches
+examples/sdn/controller/obj_exp5438/rpl-timers.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/rpl-timers.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/rpl-dag.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/rpl-dag.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/frame802154.o matches
+Binary file examples/sdn/controller/obj_exp5438/nullsec.o matches
+Binary file examples/sdn/controller/obj_exp5438/compower.o matches
+examples/sdn/controller/obj_exp5438/ip64-addr.d: ../../../core/net/ip/ip64-addr.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/ip64-addr.d: ../../../core/net/ip/ip64-addr.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/rpl-icmp6.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/rpl-icmp6.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/net-debug.o matches
+examples/sdn/controller/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/atom-app-join-cfg.d: ../../../core/./net/sdn/sdn-cd.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/atom-app-join-cfg.d: ../../../core/./net/sdn/sdn-cd.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/cc2420-arch.o matches
+examples/sdn/controller/obj_exp5438/atom-app-route-sp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/atom-app-route-sp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/uip-ds6-nbr.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/uip-ds6-nbr.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/rpl-mrhof.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/rpl-mrhof.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/websocket.o matches
+examples/sdn/controller/obj_exp5438/msp430.d: ../../../core/./dev/leds.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/msp430.d: ../../../core/./dev/leds.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/rpl.o matches
+Binary file examples/sdn/controller/obj_exp5438/uip6.o matches
+examples/sdn/controller/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/csma.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/csma.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/link-stats.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/link-stats.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/slipdev.o matches
+Binary file examples/sdn/controller/obj_exp5438/slip.o matches
+examples/sdn/controller/obj_exp5438/simple-udp.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/simple-udp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/simple-udp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/simple-udp.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/simple-udp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/simple-udp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/rpl-ext-header.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/rpl-ext-header.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/uip-nd6.o matches
+Binary file examples/sdn/controller/obj_exp5438/rpl-sdn.o matches
+Binary file examples/sdn/controller/obj_exp5438/atom-buffer.o matches
+Binary file examples/sdn/controller/obj_exp5438/uip-ds6-route.o matches
+examples/sdn/controller/obj_exp5438/uip-ds6-route.d: ../../../core/./net/ipv6/uip-ds6.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/uip-ds6-route.d: ../../../core/./net/ipv6/uip-ds6.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/rpl-mrhof.o matches
+examples/sdn/controller/obj_exp5438/uip-icmp6.d: ../../../core/./net/ipv6/uip-ds6.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/uip-icmp6.d: ../../../core/./net/ipv6/uip-ds6.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/contikimac.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/contikimac.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/controller/obj_exp5438/udp-socket.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/udp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/udp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/udp-socket.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/udp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/udp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/controller/obj_exp5438/cc2420.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/cc2420.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/link-stats.o matches
+Binary file examples/sdn/controller/obj_exp5438/rpl-timers.o matches
+Binary file examples/sdn/controller/obj_exp5438/rpl-of0.o matches
+Binary file examples/sdn/controller/obj_exp5438/framer-802154.o matches
+Binary file examples/sdn/controller/obj_exp5438/uip-icmp6.o matches
+Binary file examples/sdn/controller/obj_exp5438/cc2420.o matches
+examples/sdn/controller/obj_exp5438/sdn-stats.d: ../../../core/net/sdn/sdn.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/sdn-stats.d: ../../../core/net/sdn/sdn.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/sdn-conf.d: ../../../core/net/sdn/sdn-conf.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/sdn-conf.d: ../../../core/net/sdn/sdn-conf.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/mac-sequence.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/controller/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/controller/obj_exp5438/mac-sequence.d: ../../../core/./contiki.h ../../../core/./net/ip/uip.h :
+examples/sdn/controller/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/controller/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/controller/obj_exp5438/uip-ds6-nbr.o matches
+examples/sdn/controller/obj_exp5438/rpl-sdn.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/controller/obj_exp5438/rpl-sdn.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/controller/obj_exp5438/nordc.o matches
+Binary file examples/sdn/controller/obj_exp5438/sdn-conf.o matches
+examples/sdn/controller/obj_exp5438/uip-ds6.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/controller/obj_exp5438/uip-ds6.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/controller/obj_exp5438/uip-ds6.o matches
+Binary file examples/sdn/controller/obj_exp5438/sdn-packetbuf.o matches
+Binary file examples/sdn/controller/obj_exp5438/print-stats.o matches
+Binary file examples/sdn/controller/contiki-exp5438.a matches
+examples/sdn/controller/sdn-controller.c:#include "net/ip/uip.h"
+Binary file examples/sdn/controller/sdn-controller.exp5438 matches
+examples/sdn/node/sdn-udp-client-repo.c:#include "net/ip/uip.h"
+examples/sdn/node/sdn-udp-client_nfv.c:#include "net/ip/uip.h"
+examples/sdn/node/sdn-udp-client_udp.c:#include "net/ip/uip.h"
+examples/sdn/node/contiki-exp5438.map: .any.text.uip_htons
+examples/sdn/node/contiki-exp5438.map: .any.text.uip_htonl
+examples/sdn/node/contiki-exp5438.map:                0x000000000000c7cc                uip_htonl
+examples/sdn/node/sdn-udp-client.c:#include "net/ip/uip.h"
+Binary file examples/sdn/node/obj_exp5438/usdn-engine.o matches
+Binary file examples/sdn/node/obj_exp5438/usdn-driver.o matches
+Binary file examples/sdn/node/obj_exp5438/rpl-icmp6.o matches
+examples/sdn/node/obj_exp5438/sdn-packetbuf.d: ../../../core/./lib/random.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/sdn-packetbuf.d: ../../../core/./lib/random.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/sdn-cd.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/sdn-cd.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/tcpip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/tcpip.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/tcpip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/tcpip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/tcpip.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/tcpip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/node/obj_exp5438/uip-udp-packet.o matches
+examples/sdn/node/obj_exp5438/slipdev.d: ../../../core/net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/slipdev.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/slipdev.d: ../../../core/net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/slipdev.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/resolv.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/resolv.d: ../../../core/./net/ip/resolv.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/resolv.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/resolv.d: ../../../core/./net/ip/resolv.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/psock.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/psock.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/psock.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/psock.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/psock.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/psock.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/node/obj_exp5438/rpl-ext-header.o matches
+examples/sdn/node/obj_exp5438/phase.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/phase.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/framer-802154.d: ../../../core/./net/llsec/llsec802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/framer-802154.d: ../../../core/./net/llsec/llsec802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/uip-debug.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/uip-debug.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/websocket-http-client.d: ../../../core/net/ip/tcp-socket.h ../../../core/net/ip/uip.h \
+examples/sdn/node/obj_exp5438/websocket-http-client.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uiplib.h \
+examples/sdn/node/obj_exp5438/websocket-http-client.d: ../../../core/./net/ip/resolv.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/websocket-http-client.d: ../../../core/net/ip/tcp-socket.h ../../../core/net/ip/uip.h :
+examples/sdn/node/obj_exp5438/websocket-http-client.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uiplib.h :
+examples/sdn/node/obj_exp5438/websocket-http-client.d: ../../../core/./net/ip/resolv.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/phase.o matches
+Binary file examples/sdn/node/obj_exp5438/udp-socket.o matches
+examples/sdn/node/obj_exp5438/nbr-table.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/nbr-table.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/sdn-stats.o matches
+examples/sdn/node/obj_exp5438/nullmac.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/nullmac.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/nullsec.d: ../../../core/./net/llsec/llsec802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/nullsec.d: ../../../core/./net/llsec/llsec802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/queuebuf.o matches
+Binary file examples/sdn/node/obj_exp5438/sicslowpan.o matches
+Binary file examples/sdn/node/obj_exp5438/uip-debug.o matches
+examples/sdn/node/obj_exp5438/frame802154e-ie.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/frame802154e-ie.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/tcp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/node/obj_exp5438/ccm-star-packetbuf.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/ccm-star-packetbuf.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/nullmac.o matches
+Binary file examples/sdn/node/obj_exp5438/dhcpc.o matches
+examples/sdn/node/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/node/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/node/obj_exp5438/cc2420-arch.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/node/obj_exp5438/netstack.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/netstack.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/nullrdc-noframer.o matches
+Binary file examples/sdn/node/obj_exp5438/psock.o matches
+examples/sdn/node/obj_exp5438/sdn-ext-header.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/sdn-ext-header.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/sdn-cd.o matches
+examples/sdn/node/obj_exp5438/uip-nd6.d: ../../../core/./net/ipv6/uip-icmp6.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/uip-nd6.d: ../../../core/./net/ipv6/uip-icmp6.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/framer-nullmac.o matches
+Binary file examples/sdn/node/obj_exp5438/ccm-star-packetbuf.o matches
+examples/sdn/node/obj_exp5438/sdn.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/sdn.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/rpl-ns.d: ../../../core/net/sdn/sdn-stack.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/rpl-ns.d: ../../../core/net/sdn/sdn-stack.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/contiki-exp5438-main.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/contiki-exp5438-main.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/resolv.o matches
+Binary file examples/sdn/node/obj_exp5438/netstack.o matches
+Binary file examples/sdn/node/obj_exp5438/csma.o matches
+examples/sdn/node/obj_exp5438/sicslowpan.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/sicslowpan.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/packetbuf.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/packetbuf.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/packetbuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/node/obj_exp5438/ip64-addr.o matches
+Binary file examples/sdn/node/obj_exp5438/anti-replay.o matches
+examples/sdn/node/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/node/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/node/obj_exp5438/uip-nameserver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/node/obj_exp5438/uip-split.o matches
+examples/sdn/node/obj_exp5438/sdn-ft.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/sdn-ft.d: ../../../core/./sys/energest.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/nullrdc.o matches
+Binary file examples/sdn/node/obj_exp5438/rpl-nbr-policy.o matches
+Binary file examples/sdn/node/obj_exp5438/log-ng.o matches
+Binary file examples/sdn/node/obj_exp5438/mac-sequence.o matches
+examples/sdn/node/obj_exp5438/frame802154.d: ../../../core/./net/llsec/llsec802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/frame802154.d: ../../../core/./net/llsec/llsec802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/rpl-nbr-policy.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/rpl-nbr-policy.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/rpl-of0.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/rpl-of0.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/sdn-ext-header.o matches
+Binary file examples/sdn/node/obj_exp5438/uiplib.o matches
+Binary file examples/sdn/node/obj_exp5438/contikimac-framer.o matches
+examples/sdn/node/obj_exp5438/multiflow.d: ../../../core/./lib/random.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/multiflow.d: ../../../core/./lib/random.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/tcp-socket.o matches
+examples/sdn/node/obj_exp5438/dhcpc.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/dhcpc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/node/obj_exp5438/dhcpc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/dhcpc.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/dhcpc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/node/obj_exp5438/dhcpc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/node/obj_exp5438/usdn-adapter.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/usdn-adapter.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/msp430.o matches
+examples/sdn/node/obj_exp5438/compower.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/compower.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/websocket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/websocket.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/websocket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/websocket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/websocket.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/websocket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/node/obj_exp5438/uip-split.d: ../../../core/./net/ip/uip-split.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/uip-split.d: ../../../core/./net/ip/uip-split.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/sdn-ft.o matches
+examples/sdn/node/obj_exp5438/uip-packetqueue.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/uip-packetqueue.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/contikimac-framer.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/contikimac-framer.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/nbr-table.o matches
+examples/sdn/node/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/node/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/node/obj_exp5438/rpl-dag-root.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/node/obj_exp5438/uiplib.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/uiplib.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/net-debug.d: ../../../core/./net/net-debug.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/net-debug.d: ../../../core/./net/net-debug.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/uip-udp-packet.d: ../../../core/./net/ip/uip-udp-packet.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/uip-udp-packet.d: ../../../core/./net/ip/uip-udp-packet.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/rpl-dag-root.o matches
+Binary file examples/sdn/node/obj_exp5438/usdn-adapter.o matches
+examples/sdn/node/obj_exp5438/log-ng.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/log-ng.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/multiflow.o matches
+Binary file examples/sdn/node/obj_exp5438/tcpip.o matches
+Binary file examples/sdn/node/obj_exp5438/packetbuf.o matches
+examples/sdn/node/obj_exp5438/framer-nullmac.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/framer-nullmac.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/slip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/slip.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/contikimac.o matches
+Binary file examples/sdn/node/obj_exp5438/websocket-http-client.o matches
+examples/sdn/node/obj_exp5438/nullrdc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/nullrdc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/queuebuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/queuebuf.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/queuebuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/queuebuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/queuebuf.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/queuebuf.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/node/obj_exp5438/uip-nameserver.o matches
+Binary file examples/sdn/node/obj_exp5438/simple-udp.o matches
+examples/sdn/node/obj_exp5438/uip6.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/uip6.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/nullrdc-noframer.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/nullrdc-noframer.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/uip-packetqueue.o matches
+examples/sdn/node/obj_exp5438/nordc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/nordc.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/sdn.o matches
+examples/sdn/node/obj_exp5438/anti-replay.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/anti-replay.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/frame802154e-ie.o matches
+examples/sdn/node/obj_exp5438/print-stats.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/print-stats.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/rpl-dag.o matches
+Binary file examples/sdn/node/obj_exp5438/rpl-ns.o matches
+examples/sdn/node/obj_exp5438/rpl-timers.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/rpl-timers.d: ../../../core/./lib/list.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/rpl-dag.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/rpl-dag.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/frame802154.o matches
+Binary file examples/sdn/node/obj_exp5438/nullsec.o matches
+Binary file examples/sdn/node/obj_exp5438/compower.o matches
+examples/sdn/node/obj_exp5438/ip64-addr.d: ../../../core/net/ip/ip64-addr.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/ip64-addr.d: ../../../core/net/ip/ip64-addr.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/rpl-icmp6.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/rpl-icmp6.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/rpl.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/net-debug.o matches
+examples/sdn/node/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/node/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/node/obj_exp5438/usdn-driver.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/node/obj_exp5438/cc2420-arch.o matches
+examples/sdn/node/obj_exp5438/uip-ds6-nbr.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/uip-ds6-nbr.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/rpl-mrhof.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/rpl-mrhof.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/websocket.o matches
+examples/sdn/node/obj_exp5438/msp430.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/msp430.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/rpl.o matches
+Binary file examples/sdn/node/obj_exp5438/uip6.o matches
+examples/sdn/node/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h \
+examples/sdn/node/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/uip.h ../../../core/./net/ipv4/uip-fw.h :
+examples/sdn/node/obj_exp5438/usdn-engine.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/node/obj_exp5438/csma.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/csma.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/link-stats.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/link-stats.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/slipdev.o matches
+Binary file examples/sdn/node/obj_exp5438/slip.o matches
+examples/sdn/node/obj_exp5438/simple-udp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/simple-udp.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/simple-udp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/simple-udp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/simple-udp.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/simple-udp.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/node/obj_exp5438/rpl-ext-header.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/rpl-ext-header.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/uip-nd6.o matches
+Binary file examples/sdn/node/obj_exp5438/rpl-sdn.o matches
+Binary file examples/sdn/node/obj_exp5438/uip-ds6-route.o matches
+examples/sdn/node/obj_exp5438/uip-ds6-route.d: ../../../core/./net/ipv6/uip-ds6.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/uip-ds6-route.d: ../../../core/./net/ipv6/uip-ds6.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/rpl-mrhof.o matches
+examples/sdn/node/obj_exp5438/uip-icmp6.d: ../../../core/./net/ipv6/uip-ds6.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/uip-icmp6.d: ../../../core/./net/ipv6/uip-ds6.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/contikimac.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/contikimac.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/udp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/udp-socket.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/udp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/udp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/udp-socket.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/udp-socket.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+examples/sdn/node/obj_exp5438/cc2420.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/cc2420.d: ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip.h :
+Binary file examples/sdn/node/obj_exp5438/link-stats.o matches
+Binary file examples/sdn/node/obj_exp5438/rpl-timers.o matches
+Binary file examples/sdn/node/obj_exp5438/rpl-of0.o matches
+Binary file examples/sdn/node/obj_exp5438/framer-802154.o matches
+Binary file examples/sdn/node/obj_exp5438/uip-icmp6.o matches
+Binary file examples/sdn/node/obj_exp5438/cc2420.o matches
+examples/sdn/node/obj_exp5438/sdn-stats.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/sdn-stats.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/sdn-conf.d: ../../../core/net/sdn/sdn-conf.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/sdn-conf.d: ../../../core/net/sdn/sdn-conf.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h \
+examples/sdn/node/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h \
+examples/sdn/node/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+examples/sdn/node/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/tcpip.h ../../../core/./net/ip/uip.h :
+examples/sdn/node/obj_exp5438/mac-sequence.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/psock.h :
+Binary file examples/sdn/node/obj_exp5438/uip-ds6-nbr.o matches
+examples/sdn/node/obj_exp5438/rpl-sdn.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/rpl-sdn.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/nordc.o matches
+Binary file examples/sdn/node/obj_exp5438/sdn-conf.o matches
+examples/sdn/node/obj_exp5438/uip-ds6.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h \
+examples/sdn/node/obj_exp5438/uip-ds6.d: ../../../core/./net/ip/uip.h ../../../core/./net/ip/uipopt.h :
+Binary file examples/sdn/node/obj_exp5438/uip-ds6.o matches
+Binary file examples/sdn/node/obj_exp5438/sdn-packetbuf.o matches
+Binary file examples/sdn/node/obj_exp5438/print-stats.o matches
+Binary file examples/sdn/node/contiki-exp5438.a matches
+Binary file examples/sdn/node/sdn-udp-client.exp5438 matches
+examples/radio-test/contiki-exp5438.map: .any.text.uip_htons
+examples/radio-test/contiki-exp5438.map: .any.text.uip_htonl
+examples/radio-test/contiki-exp5438.map:                0x00000000000095f8                uip_htonl
+Binary file examples/radio-test/obj_exp5438/rpl-icmp6.o matches
+examples/radio-test/obj_exp5438/tcpip.d: ../../core/./contiki.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/tcpip.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/radio-test/obj_exp5438/tcpip.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/radio-test/obj_exp5438/tcpip.d: ../../core/./contiki.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/tcpip.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/radio-test/obj_exp5438/tcpip.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+Binary file examples/radio-test/obj_exp5438/uip-udp-packet.o matches
+examples/radio-test/obj_exp5438/slipdev.d: ../../core/net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/slipdev.d: ../../core/./sys/energest.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/slipdev.d: ../../core/net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/slipdev.d: ../../core/./sys/energest.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/resolv.d: ../../core/./sys/energest.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/resolv.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uip-udp-packet.h \
+examples/radio-test/obj_exp5438/resolv.d: ../../core/./sys/energest.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/resolv.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uip-udp-packet.h :
+examples/radio-test/obj_exp5438/psock.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/psock.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/psock.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/psock.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/psock.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/psock.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/rpl-ext-header.o matches
+examples/radio-test/obj_exp5438/phase.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/phase.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/framer-802154.d: ../../core/./net/llsec/llsec802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/framer-802154.d: ../../core/./net/llsec/llsec802154.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/uip-debug.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/uip-debug.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/websocket-http-client.d: ../../core/net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/websocket-http-client.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/websocket-http-client.d: ../../core/./net/ip/uip.h ../../core/net/ip/ip64-addr.h \
+examples/radio-test/obj_exp5438/websocket-http-client.d: ../../core/net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/websocket-http-client.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/websocket-http-client.d: ../../core/./net/ip/uip.h ../../core/net/ip/ip64-addr.h :
+Binary file examples/radio-test/obj_exp5438/phase.o matches
+Binary file examples/radio-test/obj_exp5438/udp-socket.o matches
+examples/radio-test/obj_exp5438/nbr-table.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/nbr-table.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/nullmac.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/nullmac.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/nullsec.d: ../../core/./net/llsec/llsec802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/nullsec.d: ../../core/./net/llsec/llsec802154.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/queuebuf.o matches
+Binary file examples/radio-test/obj_exp5438/sicslowpan.o matches
+Binary file examples/radio-test/obj_exp5438/uip-debug.o matches
+examples/radio-test/obj_exp5438/frame802154e-ie.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/frame802154e-ie.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/tcp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/tcp-socket.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/tcp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/radio-test/obj_exp5438/tcp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/tcp-socket.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/tcp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+examples/radio-test/obj_exp5438/ccm-star-packetbuf.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/ccm-star-packetbuf.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/nullmac.o matches
+Binary file examples/radio-test/obj_exp5438/dhcpc.o matches
+examples/radio-test/obj_exp5438/cc2420-arch.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/cc2420-arch.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/cc2420-arch.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/cc2420-arch.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/cc2420-arch.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/cc2420-arch.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/netstack.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/netstack.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/nullrdc-noframer.o matches
+Binary file examples/radio-test/obj_exp5438/psock.o matches
+examples/radio-test/obj_exp5438/uip-nd6.d: ../../core/./net/ipv6/uip-icmp6.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/uip-nd6.d: ../../core/./net/ipv6/uip-icmp6.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/framer-nullmac.o matches
+Binary file examples/radio-test/obj_exp5438/ccm-star-packetbuf.o matches
+examples/radio-test/obj_exp5438/rpl-ns.d: project-conf.h ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/rpl-ns.d: project-conf.h ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/contiki-exp5438-main.d: ../../core/./net/llsec/llsec802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/contiki-exp5438-main.d: ../../core/./net/llsec/llsec802154.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/resolv.o matches
+Binary file examples/radio-test/obj_exp5438/netstack.o matches
+Binary file examples/radio-test/obj_exp5438/csma.o matches
+examples/radio-test/obj_exp5438/sicslowpan.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/sicslowpan.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/packetbuf.d: ../../core/./contiki.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/packetbuf.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/radio-test/obj_exp5438/packetbuf.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/radio-test/obj_exp5438/packetbuf.d: ../../core/./contiki.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/packetbuf.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/radio-test/obj_exp5438/packetbuf.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+Binary file examples/radio-test/obj_exp5438/ip64-addr.o matches
+Binary file examples/radio-test/obj_exp5438/anti-replay.o matches
+examples/radio-test/obj_exp5438/uip-nameserver.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/uip-nameserver.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/uip-nameserver.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/uip-nameserver.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/uip-nameserver.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/uip-nameserver.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/uip-split.o matches
+Binary file examples/radio-test/obj_exp5438/nullrdc.o matches
+Binary file examples/radio-test/obj_exp5438/rpl-nbr-policy.o matches
+Binary file examples/radio-test/obj_exp5438/log-ng.o matches
+Binary file examples/radio-test/obj_exp5438/mac-sequence.o matches
+examples/radio-test/obj_exp5438/frame802154.d: ../../core/./net/llsec/llsec802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/frame802154.d: ../../core/./net/llsec/llsec802154.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/rpl-nbr-policy.d: project-conf.h ../../core/./lib/list.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-nbr-policy.d: project-conf.h ../../core/./lib/list.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/rpl-of0.d: project-conf.h ../../core/./lib/list.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-of0.d: project-conf.h ../../core/./lib/list.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/uiplib.o matches
+Binary file examples/radio-test/obj_exp5438/contikimac-framer.o matches
+Binary file examples/radio-test/obj_exp5438/tcp-socket.o matches
+examples/radio-test/obj_exp5438/dhcpc.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/dhcpc.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/dhcpc.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/dhcpc.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/dhcpc.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/dhcpc.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/msp430.o matches
+examples/radio-test/obj_exp5438/compower.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/compower.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/websocket.d: ../../core/./contiki.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/websocket.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/radio-test/obj_exp5438/websocket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/radio-test/obj_exp5438/websocket.d: ../../core/./contiki.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/websocket.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/radio-test/obj_exp5438/websocket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+examples/radio-test/obj_exp5438/uip-split.d: ../../core/./net/ip/uip-split.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/uip-split.d: ../../core/./net/ip/uip-split.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/uip-packetqueue.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/uip-packetqueue.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/contikimac-framer.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/contikimac-framer.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/radio-test/obj_exp5438/nbr-table.o matches
+examples/radio-test/obj_exp5438/rpl-dag-root.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/rpl-dag-root.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-dag-root.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-dag-root.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/rpl-dag-root.d: ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/rpl-dag-root.d: ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/uiplib.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/uiplib.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/net-debug.d: ../../core/./net/net-debug.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/net-debug.d: ../../core/./net/net-debug.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/uip-udp-packet.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/uip-udp-packet.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/radio-test/obj_exp5438/rpl-dag-root.o matches
+examples/radio-test/obj_exp5438/log-ng.d: project-conf.h ../../core/./sys/log-ng-conf.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/log-ng.d: project-conf.h ../../core/./sys/log-ng-conf.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/tcpip.o matches
+Binary file examples/radio-test/obj_exp5438/packetbuf.o matches
+examples/radio-test/obj_exp5438/framer-nullmac.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/framer-nullmac.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/slip.d: ../../core/./sys/energest.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/slip.d: ../../core/./sys/energest.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/contikimac.o matches
+Binary file examples/radio-test/obj_exp5438/websocket-http-client.o matches
+examples/radio-test/obj_exp5438/nullrdc.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/nullrdc.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/queuebuf.d: ../../core/./contiki.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/queuebuf.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/radio-test/obj_exp5438/queuebuf.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/radio-test/obj_exp5438/queuebuf.d: ../../core/./contiki.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/queuebuf.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/radio-test/obj_exp5438/queuebuf.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+Binary file examples/radio-test/obj_exp5438/uip-nameserver.o matches
+Binary file examples/radio-test/obj_exp5438/simple-udp.o matches
+examples/radio-test/obj_exp5438/uip6.d: project-conf.h ../../core/./sys/cc-gcc.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/uip6.d: project-conf.h ../../core/./sys/cc-gcc.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/nullrdc-noframer.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/nullrdc-noframer.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/uip-packetqueue.o matches
+examples/radio-test/obj_exp5438/nordc.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/nordc.d: ../../core/./net/linkaddr.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/anti-replay.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/anti-replay.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/frame802154e-ie.o matches
+examples/radio-test/obj_exp5438/print-stats.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/print-stats.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/rpl-dag.o matches
+Binary file examples/radio-test/obj_exp5438/rpl-ns.o matches
+examples/radio-test/obj_exp5438/rpl-timers.d: ../../core/./lib/list.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-timers.d: ../../core/./lib/list.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/rpl-dag.d: ../../core/./lib/list.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-dag.d: ../../core/./lib/list.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/frame802154.o matches
+Binary file examples/radio-test/obj_exp5438/nullsec.o matches
+Binary file examples/radio-test/obj_exp5438/compower.o matches
+examples/radio-test/obj_exp5438/ip64-addr.d: ../../core/net/ip/ip64-addr.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/ip64-addr.d: ../../core/net/ip/ip64-addr.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/rpl-icmp6.d: ../../core/./sys/energest.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-icmp6.d: ../../core/./sys/energest.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/rpl.d:obj_exp5438/rpl.o: ../../core/net/rpl/rpl.c ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl.d:../../core/net/rpl/rpl.c ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/net-debug.o matches
+Binary file examples/radio-test/obj_exp5438/cc2420-arch.o matches
+examples/radio-test/obj_exp5438/uip-ds6-nbr.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/uip-ds6-nbr.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/rpl-mrhof.d: project-conf.h ../../core/./lib/list.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-mrhof.d: project-conf.h ../../core/./lib/list.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/websocket.o matches
+examples/radio-test/obj_exp5438/msp430.d: ../../core/./dev/leds.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/msp430.d: ../../core/./dev/leds.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/rpl.o matches
+Binary file examples/radio-test/obj_exp5438/uip6.o matches
+examples/radio-test/obj_exp5438/csma.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/csma.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/link-stats.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/link-stats.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/slipdev.o matches
+Binary file examples/radio-test/obj_exp5438/slip.o matches
+examples/radio-test/obj_exp5438/simple-udp.d: ../../core/./contiki.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/simple-udp.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/radio-test/obj_exp5438/simple-udp.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/radio-test/obj_exp5438/simple-udp.d: ../../core/./contiki.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/simple-udp.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/radio-test/obj_exp5438/simple-udp.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+examples/radio-test/obj_exp5438/rpl-ext-header.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/rpl-ext-header.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/radio-test/obj_exp5438/uip-nd6.o matches
+Binary file examples/radio-test/obj_exp5438/rpl-sdn.o matches
+Binary file examples/radio-test/obj_exp5438/uip-ds6-route.o matches
+examples/radio-test/obj_exp5438/uip-ds6-route.d: ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/uip-ds6-route.d: ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/rpl-mrhof.o matches
+examples/radio-test/obj_exp5438/uip-icmp6.d: ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/uip-icmp6.d: ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/contikimac.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/contikimac.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+examples/radio-test/obj_exp5438/udp-socket.d: ../../core/./contiki.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/udp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/radio-test/obj_exp5438/udp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/radio-test/obj_exp5438/udp-socket.d: ../../core/./contiki.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/udp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/radio-test/obj_exp5438/udp-socket.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+examples/radio-test/obj_exp5438/cc2420.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/cc2420.d: ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/link-stats.o matches
+Binary file examples/radio-test/obj_exp5438/rpl-timers.o matches
+Binary file examples/radio-test/obj_exp5438/rpl-of0.o matches
+Binary file examples/radio-test/obj_exp5438/framer-802154.o matches
+Binary file examples/radio-test/obj_exp5438/uip-icmp6.o matches
+Binary file examples/radio-test/obj_exp5438/cc2420.o matches
+examples/radio-test/obj_exp5438/mac-sequence.d: ../../core/./contiki.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/mac-sequence.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+examples/radio-test/obj_exp5438/mac-sequence.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+examples/radio-test/obj_exp5438/mac-sequence.d: ../../core/./contiki.h ../../core/./net/ip/uip.h :
+examples/radio-test/obj_exp5438/mac-sequence.d: ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+examples/radio-test/obj_exp5438/mac-sequence.d: ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+Binary file examples/radio-test/obj_exp5438/uip-ds6-nbr.o matches
+examples/radio-test/obj_exp5438/rpl-sdn.d: project-conf.h ../../core/./lib/list.h ../../core/./net/ip/uip.h \
+examples/radio-test/obj_exp5438/rpl-sdn.d: project-conf.h ../../core/./lib/list.h ../../core/./net/ip/uip.h :
+Binary file examples/radio-test/obj_exp5438/nordc.o matches
+examples/radio-test/obj_exp5438/uip-ds6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
+examples/radio-test/obj_exp5438/uip-ds6.d: ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
+Binary file examples/radio-test/obj_exp5438/uip-ds6.o matches
+Binary file examples/radio-test/obj_exp5438/print-stats.o matches
+Binary file examples/radio-test/contiki-exp5438.a matches
+Binary file examples/radio-test/radio-test.exp5438 matches
+examples/avr-rss2/ipv6/rpl-udp-report/report.c:#include "net/ip/uip.h"
+examples/avr-rss2/ipv6/rpl-udp-report/sink.c:#include "net/ip/uip.h"
+examples/avr-rss2/ipv6/rpl-border-router/border-router.c:#include "net/ip/uip.h"
+examples/avr-rss2/ipv6/rpl-border-router/eth-bridge.c:#include "net/ip/uip.h"
+examples/avr-rss2/ipv6/dc-rpl-coap/coap-server.c:#include "net/ip/uip.h"
+examples/avr-rss2/ipv6/dc-rpl-coap/coap-client.c:#include "net/ip/uip.h"
+examples/ipv6/rpl-border-router/slip-bridge.c:#include "net/ip/uip.h"
+examples/ipv6/rpl-border-router/border-router.c:#include "net/ip/uip.h"
+examples/ipv6/rpl-collect/udp-sink.c:#include "net/ip/uip.h"
+examples/ipv6/rpl-collect/udp-sender.c:#include "net/ip/uip.h"
+examples/ipv6/multicast/root.c:  id = uip_htonl(seq_id);
+examples/ipv6/rpl-udp/udp-client.c:#include "net/ip/uip.h"
+examples/ipv6/rpl-udp/udp-server.c:#include "net/ip/uip.h"
+examples/ipv6/slip-radio/slip-radio.c:#include "net/ip/uip.h"
+examples/ipv6/slip-radio/slip-net.c:#include "net/ip/uip.h"
+examples/ipv6/simple-udp-rpl/unicast-receiver.c:#include "net/ip/uip.h"
+examples/ipv6/simple-udp-rpl/broadcast-example.c:#include "net/ip/uip.h"
+examples/ipv6/simple-udp-rpl/unicast-sender.c:#include "net/ip/uip.h"
+examples/ipv6/native-border-router/tun-bridge.c:#include "net/ip/uip.h"
+examples/ipv6/native-border-router/border-router.h:#include "net/ip/uip.h"
+examples/ipv6/native-border-router/border-router.c:#include "net/ip/uip.h"
+examples/zolertia/zoul/orion/ip64-router/ip64-router.c:#include "net/ip/uip.h"
+doc/uip6-doc.txt:The IPv6 header, extension headers, and options are defined in uip.h.
+doc/sicslowpan-doc.txt:The format of a 802.15.4 address is defined in uip.h.
+apps/httpd-ws/httpd-ws.c:  conn = tcp_connect(ipaddr, uip_htons(port), s);
+apps/mqtt/mqtt.h:#include "net/ip/uip.h"
+apps/mqtt/mqtt.c:#include "net/ip/uip.h"
+apps/webserver-nano/httpd-cgi.c:  numprinted = httpd_snprintf((char *)uip_appdata, uip_mss(), httpd_cgi_tcpstat1, uip_htons(conn->lport));
+apps/webserver-nano/httpd-cgi.c:                 uip_htons(conn->rport),
+apps/servreg-hack/servreg-hack.c:#include "net/ip/uip.h"
+apps/servreg-hack/servreg-hack.h:#include "net/ip/uip.h"
+apps/http-post-auth/http-post-auth.c:  conn = tcp_connect(&s->addr, uip_htons(80), s);
+apps/webserver/httpd-cgi.c:         uip_htons(conn->lport),
+apps/webserver/httpd-cgi.c:         uip_htons(conn->rport),
+apps/webserver/httpd-cgi.c:         uip_htons(conn->lport),
+apps/webserver/httpd-cgi.c:         uip_htons(conn->rport),
+apps/webbrowser/webclient.c:  conn = tcp_connect(ipaddr, uip_htons(port), NULL);
+apps/ftp/ftpc.c:      tcp_unlisten(uip_htons(c->dataconn.port));
+apps/ftp/ftpc.c:      tcp_listen(uip_htons(c->dataconn.port));
+apps/ftp/ftpc.c:		  uip_ipaddr_to_quad(&uip_hostaddr),
+apps/shell/shell-udpsend.c:  udpconn = udp_new(&serveraddr, uip_htons(port), NULL);
+apps/shell/shell-udpsend.c:    udp_bind(udpconn, uip_htons(local_port));
+apps/shell/shell-ping.c:  uip_ipaddr_copy(&UIP_IP_BUF->srcipaddr, &uip_hostaddr);
+apps/shell/shell-ping.c:  UIP_ICMP_BUF->seqno = uip_htons(seqno++);
+apps/shell/shell-netstat.c:	     uip_htons(conn->lport),
+apps/shell/shell-netstat.c:	     uip_htons(conn->rport),
+apps/multiflow/multiflow.c:#include "net/ip/uip.h"
+apps/atom/atom-app-route-sp.c:#include "net/ip/uip.h"
+apps/atom/atom-buffer.c:#include "net/ip/uip.h"
+apps/atom/atom-net.c:#include "net/ip/uip.h"
+apps/atom/atom-app-route-rpl.c:#include "net/ip/uip.h"
+apps/atom/atom-sb-usdn.c:#include "net/ip/uip.h"
+apps/atom/atom-sb-rpl.c:#include "net/ip/uip.h"
+apps/atom/atom.c:#include "net/ip/uip.h"
+apps/codeprop/tcp_loader2.c:#include "net/ip/uip.h"
+apps/codeprop/tcp_loader2.c:  s.len = uip_htons(((struct codeprop_tcphdr *)uip_appdata)->len);
+apps/codeprop/tcp_loader.c:#include "net/ip/uip.h"
+apps/codeprop/tcp_loader.c:  s.len = uip_htons(((struct codeprop_tcphdr *)uip_appdata)->len);
+apps/codeprop/codeprop.c:  uh->addr = uip_htons(s.addr);
+apps/codeprop/codeprop.c:  uh->id = uip_htons(s.id);
+apps/codeprop/codeprop.c:  uh->len = uip_htons(s.len);
+apps/codeprop/codeprop.c:		    uip_htons(uh->addr), s.addr));
+apps/codeprop/codeprop.c:	    if(uip_htons(uh->addr) <= s.addr) {
+apps/codeprop/codeprop.c:	      s.addr = uip_htons(uh->addr);
+apps/codeprop/codeprop.c:  uh->addr = uip_htons(addr);
+apps/codeprop/codeprop.c:    PRINTF(("recv_udpthread: id %d uh->id %d\n", s.id, uip_htons(uh->id)));
+apps/codeprop/codeprop.c:		    uip_htons(uh->id) > s.id);
+apps/codeprop/codeprop.c:      if(uip_htons(uh->addr) != 0) {
+apps/codeprop/codeprop.c:    } while(uip_htons(uh->addr) != 0);
+apps/codeprop/codeprop.c:    s.id = uip_htons(uh->id);
+apps/codeprop/codeprop.c:    s.len = uip_htons(uh->len);
+apps/codeprop/codeprop.c:      if(uip_htons(uh->addr) == s.addr) {
+apps/codeprop/codeprop.c:      } else if(uip_htons(uh->addr) > s.addr) {
+apps/codeprop/codeprop.c:	PRINTF(("sending nack since 0x%x != 0x%x\n", uip_htons(uh->addr), s.addr));
+apps/codeprop/codeprop.c:			  uip_htons(uh->id) == s.id));
+apps/codeprop/codeprop.c:    s.len = uip_htons(th->len);
+apps/codeprop/codeprop-tmp.c:  uh->addr = uip_htons(s.addr);
+apps/codeprop/codeprop-tmp.c:  uh->id = uip_htons(s.id);
+apps/codeprop/codeprop-tmp.c:  uh->len = uip_htons(s.len);
+apps/codeprop/codeprop-tmp.c:		    uip_htons(uh->addr), s.addr));
+apps/codeprop/codeprop-tmp.c:	    if(uip_htons(uh->addr) <= s.addr) {
+apps/codeprop/codeprop-tmp.c:	      s.addr = uip_htons(uh->addr);
+apps/codeprop/codeprop-tmp.c:  uh->addr = uip_htons(addr);
+apps/codeprop/codeprop-tmp.c:    PRINTF(("recv_udpthread: id %d uh->id %d\n", s.id, uip_htons(uh->id)));
+apps/codeprop/codeprop-tmp.c:		    uip_htons(uh->id) > s.id);
+apps/codeprop/codeprop-tmp.c:      if(uip_htons(uh->addr) != 0) {
+apps/codeprop/codeprop-tmp.c:    } while(uip_htons(uh->addr) != 0);
+apps/codeprop/codeprop-tmp.c:    s.id = uip_htons(uh->id);
+apps/codeprop/codeprop-tmp.c:    s.len = uip_htons(uh->len);
+apps/codeprop/codeprop-tmp.c:      if(uip_htons(uh->addr) == s.addr) {
+apps/codeprop/codeprop-tmp.c:      } else if(uip_htons(uh->addr) > s.addr) {
+apps/codeprop/codeprop-tmp.c:	PRINTF(("sending nack since 0x%x != 0x%x\n", uip_htons(uh->addr), s.addr));
+apps/codeprop/codeprop-tmp.c:			  uip_htons(uh->id) == s.id));
+apps/codeprop/codeprop-tmp.c:    s.len = uip_htons(th->len);
+apps/telnet/telnet.c:  conn = tcp_connect(addr, uip_htons(port), s);
+apps/telnet/simpletelnet.c:  conn = tcp_connect(addrptr, uip_htons(port), &ts_appstate);
+cpu/x86/drivers/quarkX1000/eth.c:#include "net/ip/uip.h"
+cpu/native/net/tapdev-drv.c:#include "net/ip/uip.h"
+cpu/native/net/tapdev-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IPV6)) {
+cpu/native/net/tapdev-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IP)) {
+cpu/native/net/tapdev-drv.c:    } else if(BUF->type == uip_htons(UIP_ETHTYPE_ARP)) {
+cpu/native/net/tapdev6.c:#include "net/ip/uip.h"
+cpu/native/net/tapdev.c:#include "net/ip/uip.h"
+cpu/native/net/wpcap-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IPV6)) {
+cpu/native/net/wpcap-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IP)) {
+cpu/native/net/wpcap-drv.c:    } else if(BUF->type == uip_htons(UIP_ETHTYPE_ARP)) {
+cpu/native/net/wpcap-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IPV6)) {
+cpu/native/net/wpcap-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IPV6)) {
+cpu/native/net/wpcap-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IP)) {
+cpu/native/net/wpcap-drv.c:    } else if(BUF->type == uip_htons(UIP_ETHTYPE_ARP)) {
+cpu/arm/at91sam7s/loader/codeprop-otf.c:  uh->addr = uip_htons(s.addr);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:  uh->id = uip_htons(s.id);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:  uh->len = uip_htons(s.len);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:		    uip_htons(uh->addr), s.addr));
+cpu/arm/at91sam7s/loader/codeprop-otf.c:	    if(uip_htons(uh->addr) <= s.addr) {
+cpu/arm/at91sam7s/loader/codeprop-otf.c:	      s.addr = uip_htons(uh->addr);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:  uh->addr = uip_htons(addr);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:    PRINTF(("recv_udpthread: id %d uh->id %d\n", s.id, uip_htons(uh->id)));
+cpu/arm/at91sam7s/loader/codeprop-otf.c:		    uip_htons(uh->id) > s.id);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:      if(uip_htons(uh->addr) != 0) {
+cpu/arm/at91sam7s/loader/codeprop-otf.c:    } while(uip_htons(uh->addr) != 0);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:    s.id = uip_htons(uh->id);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:    s.len = uip_htons(uh->len);
+cpu/arm/at91sam7s/loader/codeprop-otf.c:      if(uip_htons(uh->addr) == s.addr) {
+cpu/arm/at91sam7s/loader/codeprop-otf.c:      } else if(uip_htons(uh->addr) > s.addr) {
+cpu/arm/at91sam7s/loader/codeprop-otf.c:	PRINTF(("sending nack since 0x%x != 0x%x\n", uip_htons(uh->addr), s.addr));
+cpu/arm/at91sam7s/loader/codeprop-otf.c:			  uip_htons(uh->id) == s.id));
+cpu/arm/at91sam7s/loader/codeprop-otf.c:    s.len = uip_htons(th->len);
+cpu/arm/common/usb/cdc-eth/cdc-eth.c:	if(BUF->type == uip_htons(UIP_ETHTYPE_IPV6)) {
+cpu/arm/common/usb/cdc-eth/cdc-eth.c:	  if(BUF->type == uip_htons(UIP_ETHTYPE_IP)) {
+cpu/arm/common/usb/cdc-eth/cdc-eth.c:	  } else if(BUF->type == uip_htons(UIP_ETHTYPE_ARP)) {
+cpu/arm/common/usb/cdc-eth/dhcps.c:  memcpy(optptr, &uip_hostaddr, 4);
+cpu/arm/common/usb/cdc-eth/dhcps.c:  memcpy(m->siaddr, &uip_hostaddr, 4);
+cpu/arm/common/usb/cdc-eth/dhcps.c:	      if (!opt || uip_ipaddr_cmp((uip_ipaddr_t*)&opt[2], &uip_hostaddr)) {
+cpu/arm/common/usb/cdc-eth/cdc-eth.h:#include <net/ip/uip.h>
+cpu/msp430/uip-ipchksum.c:#include "net/ip/uip.h"
+cpu/msp430/loader-arch.c:#include "net/ip/uip.h"
+cpu/msp430/loader-arch.c:  sumlen = uip_htons(sumlen);
+cpu/msp430/loader-arch.c:  codelen = uip_htons(codelen);
+cpu/msp430/loader-arch.c:  datalen = uip_htons(datalen);
+cpu/6502/lib/log.c:#include "net/ip/uip.h"
+cpu/6502/net/uip_arch.c:#include "net/ip/uip.h"
+cpu/6502/net/ethernet-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IPV6)) {
+cpu/6502/net/ethernet-drv.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IP)) {
+cpu/6502/net/ethernet-drv.c:    } else if(BUF->type == uip_htons(UIP_ETHTYPE_ARP)) {
+cpu/stm32w108/uip-arch.c:#include "net/ip/uip.h"
+cpu/nrf52832/ble/ble-mac.c:#include "net/ip/uip.h"
+cpu/avr/radio/mac/mac.c:#include "uip.h"
+cpu/avr/dev/usb/usb_specific_request.c:#include "uip.h"
+cpu/avr/dev/usb/rndis/rndis.c:#include "uip.h"
+cpu/avr/dev/usb/rndis/cdc_ecm.c:#include "uip.h"
+cpu/avr/dev/usb/rndis/rndis_task.c:#include "uip.h"
+cpu/avr/dev/usb/rndis/cdc_eem.c:#include "uip.h"
+platform/eval-adf7xxxmb4z/contiki-main.c:#include "net/ip/uip.h"
+platform/ev-aducrf101mkxz/contiki-main.c:#include "net/ip/uip.h"
+platform/avr-raven/apps/raven-webserver/httpd-cgi.c:  numprinted = httpd_snprintf((char *)uip_appdata, uip_mss(), httpd_cgi_tcpstat1, uip_htons(conn->lport));
+platform/avr-raven/apps/raven-webserver/httpd-cgi.c:                 uip_htons(conn->rport),
+platform/cooja-ip64/contiki-cooja-ip64-main.c:#include "net/ip/uip.h"
+platform/cc2538dk/contiki-main.c:#include "net/ip/uip.h"
+platform/mbxxx/contiki-main.c:#include "net/ip/uip.h"
+platform/stm32nucleo-spirit1/contiki-spirit1-main.c:#include "net/ip/uip.h"
+platform/native/contiki-main.c:#include "net/ip/uip.h"
+platform/jn516x/lib/log.c:#include "net/ip/uip.h"
+platform/jn516x/lib/slip.c:#include "net/ip/uip.h"
+platform/jn516x/contiki-jn516x-main.c:#include "net/ip/uip.h"
+platform/jn516x/contiki-jn516x-main.c:#include "net/ip/uip.h"
+platform/jn516x/contiki-jn516x-main.c:           uip_ipaddr_to_quad(&uip_hostaddr));
+platform/cc2530dk/viztool.c:        flip = uip_htonl(rt->state.lifetime);
+platform/zoul/contiki-main.c:#include "net/ip/uip.h"
+platform/avr-atmega128rfa1/apps/raven-webserver/httpd-cgi.c:  numprinted = httpd_snprintf((char *)uip_appdata, uip_mss(), httpd_cgi_tcpstat1, uip_htons(conn->lport));
+platform/avr-atmega128rfa1/apps/raven-webserver/httpd-cgi.c:                 uip_htons(conn->rport),
+platform/sky/contiki-sky-main.c:#include "net/ip/uip.h"
+platform/sky/contiki-sky-main.c:	   uip_ipaddr_to_quad(&uip_hostaddr));
+platform/cooja/contiki-cooja-main.c:#include "net/ip/uip.h"
+platform/cooja/contiki-cooja-main.c:#include "net/ip/uip.h"
+platform/cooja/contiki-cooja-main.c:       uip_ipaddr_to_quad(&uip_hostaddr));
+platform/cooja/dev/ip.c:#include "net/ip/uip.h"
+platform/cooja/sys/log.c:#include "uip.h"
+platform/cooja/testapps/testuip.c:#include "net/ip/uip.h"
+platform/cooja/testapps/testuaodv.c:#include "net/ip/uip.h"
+platform/cooja/testapps/testuaodv.c:        printf("%d.%d.%d.%d: lookup %d.%d.%d.%d\n", uip_ipaddr_to_quad(&uip_hostaddr), uip_ipaddr_to_quad(&addr));
+platform/cooja/testapps/testuaodv.c:        printf("%d.%d.%d.%d: send to %d.%d.%d.%d\n", uip_ipaddr_to_quad(&uip_hostaddr), uip_ipaddr_to_quad(&addr));
+platform/cooja/net/uip-driver.c:#include "net/ip/uip.h"
+platform/cooja/net/radio-uip-uaodv.c:#include "net/ip/uip.h"
+platform/cooja/net/radio-uip-uaodv.c:int radio_uip_handle_ack(uint8_t *buf, int len);
+platform/cooja/net/radio-uip-uaodv.c:    radio_uip_handle_ack(&uip_buf[UIP_LLH_LEN], uip_len);
+platform/cooja/net/radio-uip-uaodv.c:radio_uip_handle_ack(uint8_t *buf, int len)
+platform/cooja/net/radio-uip-uaodv.c:  return !memcmp(&buf[FWD_NEXT_IP], &uip_hostaddr, 4);
+platform/cooja/net/radio-uip-uaodv.c:  return !memcmp((&((struct uip_udpip_hdr *)buf)->destipaddr), &uip_hostaddr, 4);
+platform/z1/contiki-z1-main.c:#include "net/ip/uip.h"
+platform/z1/contiki-z1-main.c:           uip_ipaddr_to_quad(&uip_hostaddr));
+platform/minimal-net/contiki-main.c:#include "net/ip/uip.h"
+platform/avr-ravenusb/sicslow_ethernet.c:#include "uip.h"
+platform/avr-ravenusb/sicslow_ethernet.c:  ETHBUF(uip_buf)->type = uip_htons(UIP_ETHTYPE_IPV6);
+platform/avr-ravenusb/sicslow_ethernet.c:    ETHBUF(raw_buf)->type = uip_htons(0x809A);  //UIP_ETHTYPE_802154 0x809A
+platform/avr-ravenusb/sicslow_ethernet.c:    ETHBUF(raw_buf)->type = uip_htons(0x809A);  //UIP_ETHTYPE_802154 0x809A
+platform/openmote-cc2538/contiki-main.c:#include "net/ip/uip.h"
+platform/wismote/contiki-wismote-main.c:#include "net/ip/uip.h"
+platform/wismote/contiki-wismote-main.c:	 //  uip_ipaddr_to_quad(&uip_hostaddr));
+platform/micaz/init-net.c:#include "net/ip/uip.h"
+platform/micaz/init-net.c:	              uip_ipaddr_to_quad(&uip_hostaddr));
+platform/exp5438/msp430.c:#include "net/ip/uip.h"
+platform/galileo/net/eth-proc.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IPV6)) {
+platform/galileo/net/eth-proc.c:    if(BUF->type == uip_htons(UIP_ETHTYPE_IP)) {
+platform/galileo/net/eth-proc.c:    } else if(BUF->type == uip_htons(UIP_ETHTYPE_ARP)) {
+Binary file .git/objects/pack/pack-cdd1b9ada54066bdecba966a0d0cd35a5491f8c4.pack matches
+Binary file .git/index matches
