@@ -55,6 +55,7 @@
 #include "atom-conf.h"
 
 #define INFINITY 10000000
+#define RECONF_FACTOR 2
 
 
 /*search*/
@@ -172,22 +173,43 @@ static void copy_to_spath() {
   spath_length = top+1;
 }
 
+static bool IS_NFV(int node){
+	int length = get_length(nfv);
+	for (int i = 0; i < length; ++i)
+	{
+		if (nfv[i] == node ) return true;
+	}
+	return false;
+}
+
 static int* getAffected(){
-  int result[40] = {0};
-    for (int i = 0; i < 40; ++i)
-    {
-      /* code */
-      for (int j = 0; j < 100; ++j)
-      {
-        /* code */
-        if (routelist[i][j] == 0) break;
-        node = atom_net_get_node_id(routelist[i][j])
-        if(node.energy >= HIGHEST_ENERGY){
-          result[i] = 1;
+  int result[TOPOLOGY-SIZE] = {0};
+  atom_node_t node = NULL;
+  for (int i = 0; i < TOPOLOGY-SIZE; ++i){
+  	for (int j = 0; j < TOPOLOGY-SIZE; ++j){
+        if (prilist[i][j] != 0 || seclist[i][j] != 0){
+        	node = atom_net_get_node_id(routelist[i][j])
+	        if(node.energy >= ENERGY_THRESHOLD)
+	          result[i] = 1;
         }
       }
     }
     return result;
+}
+
+static bool nfv_affected(){
+	int result[TOPOLOGY-SIZE] = {0};
+  	atom_node_t node = NULL;
+  	for (int i = 0; i < TOPOLOGY-SIZE; ++i){
+  		for (int j = 0; j < TOPOLOGY-SIZE; ++j){
+        	if (prilist[i][j] != 0 || seclist[i][j] != 0){
+	        	node = atom_net_get_node_id(routelist[i][j])
+		        if(IS_NFV(routelist[i][j]) && node.energy >= ENERGY_THRESHOLD)
+		          return true;
+	        }
+	    }
+    }
+    return false;
 }
 
 static int get_length(int* a){
@@ -460,7 +482,8 @@ static void DRS(void){
     aps(nfv, SINK);
     state = 1;
   } else {
-    tx_node = getAffected();
+    tx_node = getAffected(); 
+    if (nfv_affected() || get_length(tx_node) >= RECONF_FACTOR)
     aps(tx_node, nfv);
   }
 }
